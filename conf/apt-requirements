@@ -6,6 +6,7 @@ libsasl2-dev
 libldap2-dev
 libpq-dev
 libjpeg-dev
+libffi-dev
 
 # Ferramentas
 gcc
@@ -22,6 +23,7 @@ openssh-client
 postgresql-client
 make
 pkg-config
+build-essential
 
 ##### Dependências da Localização Brasileira #####
 libssl-dev
