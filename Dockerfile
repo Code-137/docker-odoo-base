@@ -30,6 +30,10 @@ RUN pip3 install setuptools && pip3 install --no-cache-dir --upgrade pip
 RUN pip3 install --no-cache-dir -r pip-requirements && \
     pip3 install --no-cache-dir -r brasil-requirements
 
+# Postgres latest version
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client
 
 	##### Repositórios TrustCode e OCB #####
 
