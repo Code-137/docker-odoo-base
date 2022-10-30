@@ -13,7 +13,7 @@ ADD conf/pip-requirements /opt/sources/
 WORKDIR /opt/sources/
 RUN apt-get update && apt-get install -y --no-install-recommends $(grep -v '^#' apt-requirements)
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
     apt-get install -y nodejs && \
     curl -L https://www.npmjs.com/install.sh | sh && \
     npm install -g less && npm cache clean --force
