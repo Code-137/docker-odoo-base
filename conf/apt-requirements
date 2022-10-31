@@ -28,8 +28,8 @@ build-essential
 libssl-dev
 libxmlsec1-dev
 libxmlsec1-openssl
-python-openssl
-python-cffi
+python-openssl-doc
+python-cffi-doc
 
 
 ##### Dependências do WKHTMLTOX #####
@@ -39,4 +39,5 @@ libxext6
 libxrender1
 xfonts-base
 xfonts-75dpi
+wkhtmltopdf
 

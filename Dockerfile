@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM=xterm
@@ -17,11 +17,6 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
     apt-get install -y nodejs && \
     curl -L https://www.npmjs.com/install.sh | sh && \
     npm install -g less && npm cache clean --force
-
-ADD https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.focal_amd64.deb /opt/sources/wkhtmltox.deb
-RUN dpkg -i wkhtmltox.deb && rm wkhtmltox.deb && \
-    locale-gen en_US en_US.UTF-8 pt_BR pt_BR.UTF-8 && \
-    dpkg-reconfigure locales
 
 ENV LC_ALL pt_BR.UTF-8
 
